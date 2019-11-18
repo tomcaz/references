@@ -14,7 +14,7 @@ db.customers.find().limit(4);
 db.customers.update({},{$set:{}})
 db.customers.update({},{$inc:{}})
 db.customers.update({},{$unset:{}})
-db.customers.update({},{},{$upset:true}})
+db.customers.update({},{},{$upsert:true}})
 db.customers.update({}.{$rename:{}})
 
 db.customers.find({$or:[]})
@@ -22,3 +22,5 @@ db.customers.find({$or:[]})
 db.customers.find({age:{$gt:}})
 
 db.customers.find().forEach(function(doc){print()});
+
+db.serverStatus().wiredTiger.cache

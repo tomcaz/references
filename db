@@ -1,0 +1,24 @@
+https://treehouse.github.io/installation-guides/mac/mongo-mac.html
+
+sudo chown -R `id -un` /Users/zawhtun/desktop/mongo/data/db
+mongod --directoryperdb --dbpath /Users/zawhtun/desktop/mongo/data/db
+
+show dbs
+use mycustomers
+db.createCollection('customers')
+db.customers.find()
+db.customers.find().pretty();
+db.customers.find().sort({:1});
+db.customers.find().count();
+db.customers.find().limit(4);
+db.customers.update({},{$set:{}})
+db.customers.update({},{$inc:{}})
+db.customers.update({},{$unset:{}})
+db.customers.update({},{},{$upset:true}})
+db.customers.update({}.{$rename:{}})
+
+db.customers.find({$or:[]})
+
+db.customers.find({age:{$gt:}})
+
+db.customers.find().forEach(function(doc){print()});
